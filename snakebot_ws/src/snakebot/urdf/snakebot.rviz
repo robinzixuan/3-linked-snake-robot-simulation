@@ -323,17 +323,7 @@ Visualization Manager:
                           link_four:
                             rod_six:
                               link_five:
-                                rod_seven:
-                                  link_six:
-                                    rod_eight:
-                                      link_seven:
-                                        rod_nine:
-                                          link_eight:
-                                            rod_ten:
-                                              link_nine:
-                                                rod_eleven:
-                                                  link_ten:
-                                                    {}
+                                  {}
       Update Interval: 0
       Value: true
   Enabled: true
