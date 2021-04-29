@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.6.0-1-g15f4949  Build Version: 1.6.7594.29634
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="snakebot">
+  <link
+    name="dummy_link">
+  </link>
+  <joint
+    name="dummy_joint"
+    type="fixed">
+    <parent
+      link="dummy_link"/>
+    <child
+      link="base_link"/>
+  </joint>
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="0.0639216007821218 2.50000000135633E-07 0.03175025"
+        rpy="0 0 0" />
+      <mass
+        value="0.31974819923969" />
+      <inertia
+        ixx="0.40228007941326755"
+        ixy="-1.08152012126274E-18"
+        ixz="-4.58293797599228E-19"
+        iyy="0.40356844801998132"
+        iyz="-1.16439475658242E-18"
+        izz="0.20359667836625255" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="rod_one">
+    <inertial>
+      <origin
+        xyz="-2.77555756156289E-17 0.03175025 -2.49999999902433E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0918944415792056" />
+      <inertia
+        ixx="0.000255192786793957"
+        ixy="-2.25062568663077E-35"
+        ixz="2.02955234186608E-38"
+        iyy="1.73749647082541E-05"
+        iyz="-1.45616607989176E-20"
+        izz="0.000255192786793957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_one.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_one.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rod_one_joint"
+    type="revolute">
+    <origin
+      xyz="0.2159 0 0"
+      rpy="3.1416 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="rod_one" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_one">
+    <inertial>
+      <origin
+        xyz="0.108134816869862 2.4999999991976E-07 0.03175025"
+        rpy="0 0 0" />
+      <mass
+        value="0.372498080839688" />
+      <inertia
+        ixx="0.40127571298329475"
+        ixy="-8.22466335437065E-19"
+        ixz="1.64509583289318E-19"
+        iyy="0.40265498440151005"
+        iyz="9.61291128826174E-22"
+        izz="0.20234553145484644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_one.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_one.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_one_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="rod_one" />
+    <child
+      link="link_one" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rod_three">
+    <inertial>
+      <origin
+        xyz="0 2.50000000631689E-07 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0918944415792056" />
+      <inertia
+        ixx="0.000255192786793957"
+        ixy="-2.25062568663077E-35"
+        ixz="2.02955234186622E-38"
+        iyy="1.73749647082541E-05"
+        iyz="0"
+        izz="0.000255192786793957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_three.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_three.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rod_three_joint"
+    type="revolute">
+    <origin
+      xyz="0.2159 0 0.03175"
+      rpy="0 0 0" />
+    <parent
+      link="link_one" />
+    <child
+      link="rod_three" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_two">
+    <inertial>
+      <origin
+        xyz="0.108134816869861 -9.08995101411847E-16 -2.50000000946159E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.372498080839688" />
+      <inertia
+        ixx="0.40127571298329475"
+        ixy="-9.47852896113123E-19"
+        ixz="7.11595450542596E-20"
+        iyy="0.40265498440151005"
+        iyz="6.64350777973334E-20"
+        izz="0.20234553145484644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_two.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_two.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_two_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="rod_three" />
+    <child
+      link="link_two" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rod_four">
+    <inertial>
+      <origin
+        xyz="-1.05486370749475E-08 -4.02455846426619E-16 -2.49777354330988E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0918944415792057" />
+      <inertia
+        ixx="0.000255192786793957"
+        ixy="1.34198587880627E-21"
+        ixz="1.46419576338424E-34"
+        iyy="1.73749647082543E-05"
+        iyz="-2.41848302391192E-19"
+        izz="0.000255192786793957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_four.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_four.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rod_four_joint"
+    type="revolute">
+    <origin
+      xyz="0.2159 0 0"
+      rpy="0 -0.042207 0" />
+    <parent
+      link="link_two" />
+    <child
+      link="rod_four" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_three">
+    <inertial>
+      <origin
+        xyz="0.108134816869862 2.50000000482369E-07 -2.28983498828939E-16"
+        rpy="0 0 0" />
+      <mass
+        value="0.372498080839688" />
+      <inertia
+        ixx="0.40127571298329475"
+        ixy="-9.45160942415921E-19"
+        ixz="1.0783832072922E-19"
+        iyy="0.40265498440151005"
+        iyz="-4.69457161927285E-21"
+        izz="0.20234553145484644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_three.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_three.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_three_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="-1.5708 0.042207 0" />
+    <parent
+      link="rod_four" />
+    <child
+      link="link_three" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rod_five">
+    <inertial>
+      <origin
+        xyz="0 2.50000001943166E-07 -2.77555756156289E-17"
+        rpy="0 0 0" />
+      <mass
+        value="0.0918944415792056" />
+      <inertia
+        ixx="0.000255192786793957"
+        ixy="-2.25062568663077E-35"
+        ixz="2.02955234186622E-38"
+        iyy="1.73749647082541E-05"
+        iyz="0"
+        izz="0.000255192786793957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_five.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_five.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rod_five_joint"
+    type="revolute">
+    <origin
+      xyz="0.2159 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_three" />
+    <child
+      link="rod_five" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_four">
+    <inertial>
+      <origin
+        xyz="0.108134816869862 1.94289029309402E-15 -2.50000002816091E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.372498080839688" />
+      <inertia
+        ixx="0.40127571298329475"
+        ixy="-3.59062712647956E-19"
+        ixz="2.434596914516E-19"
+        iyy="0.40265498440151005"
+        iyz="2.18374199236825E-19"
+        izz="0.20234553145484644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_four.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_four.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_four_joint"
+    type="fixed">
+    <origin
+      xyz="0 0 0"
+      rpy="1.5708 0 0" />
+    <parent
+      link="rod_five" />
+    <child
+      link="link_four" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+  <link
+    name="rod_six">
+    <inertial>
+      <origin
+        xyz="0 -3.33066907387547E-16 -2.50000002879444E-07"
+        rpy="0 0 0" />
+      <mass
+        value="0.0918944415792057" />
+      <inertia
+        ixx="0.000255192786793957"
+        ixy="1.24176970904253E-20"
+        ixz="-1.31347269856205E-35"
+        iyy="1.73749647082543E-05"
+        iyz="3.80576611124826E-19"
+        izz="0.000255192786793957" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_six.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/rod_six.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="rod_six_joint"
+    type="revolute">
+    <origin
+      xyz="0.2159 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="link_four" />
+    <child
+      link="rod_six" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-3.14"
+      upper="3.14"
+      effort="1000"
+      velocity="0.1" />
+  </joint>
+  <link
+    name="link_five">
+    <inertial>
+      <origin
+        xyz="0.108134816869862 2.5000000203477E-07 -0.0100000000000007"
+        rpy="0 0 0" />
+      <mass
+        value="0.372498080839688" />
+      <inertia
+        ixx="0.40127571298329475"
+        ixy="-2.48419963136538E-19"
+        ixz="3.01292763109358E-19"
+        iyy="0.40265498440151005"
+        iyz="1.01199467457088E-19"
+        izz="0.20234553145484644" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_five.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://snakebot/meshes/link_five.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="link_five_joint"
+    type="fixed">
+    <origin
+      xyz="0 0.01 0"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="rod_six" />
+    <child
+      link="link_five" />
+    <axis
+      xyz="0 0 1" />
+  </joint>
+
+</robot>
